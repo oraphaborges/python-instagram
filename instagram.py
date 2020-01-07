@@ -4,7 +4,6 @@ from selenium.webdriver.common.keys import Keys
 from decouple import config
 from time import sleep
 
-
 # LOADING BROWSER DRIVE
 webdriver = webdriver.Chrome('drivers/chromedriver')
 
@@ -21,3 +20,10 @@ button_login = webdriver.find_element_by_css_selector("#react-root > section > m
 button_login.click()
 sleep(3)
 
+# GOING TO SOME HASHTAG
+tags = ['lasanha','guioza','pizza']
+for tag in tags:
+    webdriver.get(f'https://www.instagram.com/explore/tags/{tag}/')
+    sleep(2)
+
+webdriver.close()
