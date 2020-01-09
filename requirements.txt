@@ -1,2 +1,5 @@
 selenium
 python-decouple
+requests
+time
+bs4
